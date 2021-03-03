@@ -5,11 +5,26 @@ repo_url: "https://github.com/CapgeminiInventIDE/PyCap"
 repo_name: "CapgeminiInventIDE/PyCap"
 
 nav:
-  - Getting Started: index.md
+  - Welcome: index.md
   - Courses:
-    - Intro To Python:
-      - Course 1: intro-to-python/course-1.md
-      - Course 2: intro-to-python/course-2.md
+    - Introduction To Python:
+      - Summary: intro-to-python/summary.md
+      - Week 1:
+        - Python Fundamentals & Data Structures: intro-to-python/week-1.0.md
+        - Using User Defined, Internal and External Libraries: intro-to-python/week-1.1.md
+      - Week 2:
+        - Input/Output: intro-to-python/week-2.0.md
+        - Object Oriented Programming: intro-to-python/week-2.1.md
+      - Week 3:
+        - Workflow - Unit Testing: intro-to-python/week-3.0.md
+        - Workflow - Formatting: intro-to-python/week-3.1.md
+        - Workflow - Type Hints: intro-to-python/week-3.2.md
+      - Week 4:
+        - Handling Errors: intro-to-python/week-4.0.md
+        - Building Commandline Applications: intro-to-python/week-4.1.md
+      - Week 5:
+        - Workflow - Version Control: intro-to-python/week-5.0.md
+        - Building an Open Source Application: intro-to-python/week-5.1.md
       - Capstone Projects:
         - Introduction: intro-to-python/capstone/intro.md
         - Board game emulation: intro-to-python/capstone/board_game.md
@@ -17,14 +32,18 @@ nav:
         - Encryption and secrets manager: intro-to-python/capstone/secrets.md
         - Building a TODO list: intro-to-python/capstone/todo_list.md
         - Scraping the web for data: intro-to-python/capstone/web_scraping.md
-    - Advanced Python:
-      - Course 1: advanced-python/course-1.md
+        - Building a basic search engine: intro-to-python/capstone/cap_search.md
+    # - Advanced Python:
+    #   - Course 1: advanced-python/course-1.md
   - Mentors: mentors.md
-  - Contributing: contributing.md
-  - Code of Conduct: code_of_conduct.md
-  - Changelog: changelog.md
-  - License: license.md
-  - About Us: about_us.md
+  - Certified Members: certified.md
+  - Additional Info:
+    - Contributing: contributing.md
+    - Code of Conduct: code_of_conduct.md
+    - Changelog: changelog.md
+    - License: license.md
+    - About Us: about_us.md
+
 
 theme:
   name: material
@@ -57,46 +76,9 @@ markdown_extensions:
 
 plugins:
   - search
-  - macros
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/CapgeminiInventIDE
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/capgemini-invent
-    - icon: fontawesome/solid/globe
-      link: https://www.capgemini.com/service/invent/
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/orgs/capgeminiinventide
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/rQcMtVE
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/capgeminiinvent/
-  mentors:
-    - name: Andy Challis
-      github: ghandic
-      description: Andy is a full stack data scientist, having experience in technologies such as <em>AWS/GCP, React/Frontend, Docker/Kubernetes, Python/Javascript/Go/Swift</em> and many libraries within such as <em>PyTorch/Flask/FastAPI/Pandas/SkLearn.</em><br><br> He drives rapid innovation of projects for clients by leveraging data assets and data science techniques and is the lead for the Capgemini Australia Python Community 2019-2021
-      courses: 
-        - intro-to-python/course-1
-        - intro-to-python/course-2
-    - name: Tim Sanderson
-      github: TimSando
-      description: Tim is a data scientist whose primary experience lies with python, docker, MLFlow and python libraries like FastAPI, Pandas and Pytorch.<br><br> He enjoys bringing data, code and people together to drive unique solutions
-      courses:
-        - intro-to-python/course-1
-    - name: Eromanga Adermann
-      github: erospace14
-      description: Ero is a Consultant within the Invent-IDE capability. She has a strong technical problem-solving background from her doctorate degree in physics, where she studied dark energy and found new ways to uncover its properties. She also has experience building innovative solutions to real-world problems, through her participation in GovHacks 2019 and the ACS Hackathon 2020 (both of which she won awards for). She has developed scripts to automate the distribution of employee dashboards, process and restructure employee data, and is currently part of the team building an AI document processing ecosystem for the Federal Government. 
-      courses:
-        - intro-to-python/course-1
-    - name: Palang Anivan
-      github: LungLung123
-      description: Palang has a background in Software Engineering and is passionate about everything technology. Always down for some good old hackathons, keeping things exciting and try to look for a new way to apply new innovation to existing problems or learn about new-leading edge technology, specifically in emerging technology or anything cool really :D.
-      courses:
-        - intro-to-python/course-1
-    - name: Nima Namjouyan
-      github: nimanamjouyan
-      description: A Data scientist passionate about Python, image processing and computer vision. Love topics in image/doc classification and multiprocessing.
-      courses:
-        - intro-to-python/course-1
+  - macros:
+      include_yaml:
+        - data/certifications.yaml
+        - data/mentors.yaml
+        - data/social.yaml
+        - data/maintainer.yaml
